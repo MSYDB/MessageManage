@@ -1,0 +1,67 @@
+spring:
+  redis:
+    host: 8.140.30.255
+    port: 6379
+    database: 0
+    password: Thx@0913
+
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://175.27.242.224:3306/message_manage?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: msydb0501
+
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+
+  #???????
+  mail:
+    #smtp????  qq????smtp.qq.com
+    host: smtp.qq.com
+    #????
+    protocol: smtp
+    # ???
+    default-encoding: UTF-8
+    #???????
+    username: 1552709754@qq.com
+    #???
+    password: jdyshgpcqliahhae
+    test-connection: true
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+
+# mybatis-plus??
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+  typeAliasesPackage: com.community.admin.*.entity, com.community.admin.blog.entity, com.community.admin.entity #?????
+  mapperLocations: classpath:mapper/*/*.xml, classpath:mapper/*.xml #xml ??
+file:
+  path:
+    upload: D:/?????/
+    prefix: /filePrefix/
+
+
+## ???  ?????
+server:
+  port: 8080
+
+
+ORDER_DEFAULT_KEY: 1234567890
+ORDER_GEN_KEY: ORDER_GEN_KEY
+
+
